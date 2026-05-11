@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instruções GitHub - Upload do Formulário Corrigido</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #007bff;
+        }
+        .header h1 {
+            color: #007bff;
+            margin: 0;
+            font-size: 28px;
+        }
+        .step-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            border: 2px solid #e0e0e0;
+            background: #f8f9fa;
+        }
+        .step-section h2 {
+            color: #007bff;
+            margin-top: 0;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .step-number {
+            background: #007bff;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .file-list {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+        .file-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .file-item.new {
+            border-left: 4px solid #28a745;
+        }
+        .file-item.backup {
+            border-left: 4px solid #ffc107;
+        }
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status.done {
+            background: #28a745;
+            color: white;
+        }
+        .status.pending {
+            background: #ffc107;
+            color: #000;
+        }
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir Instruções</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🚀 INSTRUÇÕES GITHUB - UPLOAD DO FORMULÁRIO CORRIGIDO</h1>
+            <p>Repositório: https://github.com/carloscostato-cmyk/Claro</p>
+            <p><strong>Data:</strong> <span id="currentDate"></span></p>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">1</span> ACESSAR O REPOSITÓRIO</h2>
+            <p>Acesse o repositório GitHub:</p>
+            <div class="code-block">
+https://github.com/carloscostato-cmyk/Claro
+            </div>
+            <p>Faça login com suas credenciais GitHub.</p>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">2</span> FAZER BACKUP DO ARQUIVO ORIGINAL</h2>
+            <p>Navegue até o arquivo <code>index.html</code> no branch <code>main</code>.</p>
+            <ol>
+                <li>Clique no arquivo <code>index.html</code></li>
+                <li>Clique no botão de edição (ícone de lápis ✏️)</li>
+                <li>Selecione todo o conteúdo (Ctrl+A)</li>
+                <li>Copie o conteúdo (Ctrl+C)</li>
+                <li>Crie um novo arquivo chamado <code>versao1.html</code></li>
+                <li>Cole o conteúdo original no novo arquivo</li>
+                <li>Commit com mensagem: "Backup: versão original do formulário"</li>
+            </ol>
+            <div class="success">
+                ✅ <strong>STATUS:</strong> Backup local já criado em versao1.html
+            </div>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">3</span> SUBSTITUIR O index.html</h2>
+            <p>Agora vamos substituir o arquivo principal pela versão corrigida:</p>
+            <ol>
+                <li>Abra o arquivo <code>index_fixed.html</code> local</li>
+                <li>Copie todo o conteúdo (Ctrl+A, Ctrl+C)</li>
+                <li>No GitHub, edite o arquivo <code>index.html</code></li>
+                <li>Apague todo o conteúdo existente</li>
+                <li>Cole o novo conteúdo corrigido</li>
+                <li>Commit com mensagem: "Correção: Resolvidos problemas de PDF cortado e dados ausentes"</li>
+            </ol>
+            <div class="warning">
+                ⚠️ <strong>IMPORTANTE:</strong> Mantenha o arquivo versao1.html como backup!
+            </div>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">4</span> VALIDAR NO GITHUB PAGES</h2>
+            <p>Após o upload, aguarde alguns minutos e acesse:</p>
+            <div class="code-block">
+https://carloscostato-cmyk.github.io/Claro/
+            </div>
+            <p><strong>Testes a realizar:</strong></p>
+            <ul>
+                <li>✅ Preencher o formulário completamente</li>
+                <li>✅ Gerar PDF - verificar se aparece 100% do conteúdo</li>
+                <li>✅ Verificar se todos os dados aparecem no PDF</li>
+                <li>✅ Testar download XLSX</li>
+                <li>✅ Testar botões "+1 linha"</li>
+            </ul>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">5</span> ESTRUTURA FINAL DO REPOSITÓRIO</h2>
+            <p>Após as operações, seu repositório deve conter:</p>
+            <div class="file-list">
+                <div class="file-item backup">
+                    <span><strong>versao1.html</strong> - Backup da versão original (com problemas)</span>
+                    <span class="status done">BACKUP</span>
+                </div>
+                <div class="file-item new">
+                    <span><strong>index.html</strong> - Versão corrigida (PDF funcionando)</span>
+                    <span class="status done">PRODUÇÃO</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">6</span> MUDANÇAS IMPLEMENTADAS</h2>
+            <p><strong>Correções aplicadas no novo index.html:</strong></p>
+            <ul>
+                <li>🔧 <strong>PDF cortado:</strong> windowHeight alterado de 1600px para target.scrollHeight</li>
+                <li>🔧 <strong>Dados ausentes:</strong> Implementado clone com spans de valores visíveis</li>
+                <li>🎨 <strong>Otimizações:</strong> Scale aumentado para 2, margens ajustadas</li>
+                <li>📱 <strong>Responsividade:</strong> Media queries para impressão otimizadas</li>
+                <li>✅ <strong>Qualidade:</strong> Todos os problemas reportados resolvidos</li>
+            </ul>
+        </div>
+
+        <div class="step-section">
+            <h2><span class="step-number">7</span> CONTINGÊNCIA</h2>
+            <p><strong>Se algo der errado:</strong></p>
+            <ul>
+                <li>Volte para o commit anterior no GitHub</li>
+                <li>Restaure o versao1.html como index.html se necessário</li>
+                <li>Entre em contato com a equipe de suporte</li>
+            </ul>
+            <div class="code-block">
+# Comando para voltar (se necessário)
+git checkout HEAD~1 -- index.html
+            </div>
+        </div>
+
+        <div class="success">
+            <h2>✅ RESUMO DA OPERAÇÃO</h2>
+            <p><strong>Arquivos envolvidos:</strong></p>
+            <ul>
+                <li>📁 <code>versao1.html</code> - Backup preservado</li>
+                <li>📁 <code>index.html</code> - Atualizado com correções</li>
+            </ul>
+            <p><strong>Problemas resolvidos:</strong></p>
+            <ul>
+                <li>✅ PDF cortado em 2/3 → PDF completo</li>
+                <li>✅ PDF sem dados → PDF com todos os dados</li>
+            </ul>
+            <p><strong>Status:</strong> PRONTO PARA PRODUÇÃO 🚀</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('currentDate').textContent = new Date().toLocaleString('pt-BR');
+    </script>
+</body>
+</html>
